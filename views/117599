@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <title>Index</title>
+</head>
+<body>
+  <main>
+    <section id="date">
+      <h1> <%= dateTime %> </h1>
+    </section>
+    <section id="works">
+      <ul class="fa-ul">
+	      <li><span class="fa-li"><i class="fa-regular fa-square-check"></i></span> Code </li>
+	      <hr>
+	  <li><span class="fa-li"><i class="fa-regular fa-square-check"></i></span> Food </li>
+	   <hr>
+        <% for(let i = 0; i < newItem.length; i++){ %>
+               <li><span class="fa-li"><i class="fa-regular fa-square-check"></i></span> <%= newItem[i] %> </li>
+               <hr>
+           <% } %>
+      </ul>
+      <form action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Item">
+        <button class="btn"><b class="fa-duotone fa-plus"></b></button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
